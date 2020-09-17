@@ -52,9 +52,9 @@ int loadData(const char* filename, bool ignoreFirstRow) {
 		if (vals.size() == 4 && none_of(vals.begin(), vals.end(), " ") && none_of(vals.begin(), vals.end(), "")) {
 			process_stats ps;
 
-			ps.cpu_time       = stringToInt(vals[0].c_str());
-			ps.process_number = stringToInt(vals[1].c_str());
-			ps.start_time     = stringToInt(vals[2].c_str());
+			ps.process_number = stringToInt(vals[0].c_str());
+			ps.start_time     = stringToInt(vals[1].c_str());
+			ps.cpu_time       = stringToInt(vals[2].c_str());
 			ps.io_time        = stringToInt(vals[3].c_str());
 
 			stats.push_back(ps);
